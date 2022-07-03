@@ -16,7 +16,7 @@
     </div>
 
     <div class="table-responsive">
-	<table class="table" *ngIf="products.length">
+	<table class="table" *ngIf="productsOriginal.length">
 		<thead>
 			<tr>
 				<th><button class="btn btn-primary"
@@ -30,7 +30,7 @@
 			</tr>
 		</thead>
     <tbody>
-<tr *ngFor="let product of products">
+<tr *ngFor="let product of filteredProducts">
 	<td><img *ngIf="showImage"
     [src]="product.imageUrl"
     [title]="product.productName"
