@@ -32,7 +32,7 @@ export class ProductListComponent implements OnInit {
       "releaseDate": "March 19, 2021",
       "description": "Leaf rake with 48-inch wooden handle.",
       "price": 19.95,
-      "starRating": 3.2,
+      "starRating": 4.2,
       "imageUrl": "assets/images/leaf_rake.png"
     }, {
       "productId": 2,
@@ -41,7 +41,7 @@ export class ProductListComponent implements OnInit {
       "releaseDate": "March 18, 2021",
       "description": "15 gallon capacity rolling garden cart",
       "price": 32.99,
-      "starRating": 4.2,
+      "starRating": 3.2,
       "imageUrl": "assets/images/garden_cart.png"
     }, {
       "productId": 3,
@@ -66,5 +66,9 @@ export class ProductListComponent implements OnInit {
   performFilter(filterBy: string): IProduct[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.productsOriginal.filter((product: IProduct) => product.productName.toLocaleLowerCase().includes(filterBy));
+  }
+
+  onRatingClicked($event: string): void {
+this.pageTitle = 'Product List: ' + $event;
   }
 }
