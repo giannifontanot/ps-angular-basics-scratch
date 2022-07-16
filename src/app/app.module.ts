@@ -26,8 +26,8 @@ import {RouterModule} from "@angular/router";
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: 'product', component: ProductListComponent},
-      {path: 'products/:id', component: ProductDetailComponent},
+      {path: 'products', component: ProductListComponent},
+      {path: 'product/:id', component: ProductDetailComponent},
       {path: 'welcome', component: WelcomeComponent},
       {path: '', redirectTo: 'welcome', pathMatch: 'full'},
       {path: '**', redirectTo: 'welcome', pathMatch: 'full'}
